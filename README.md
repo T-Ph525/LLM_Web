@@ -111,3 +111,27 @@ Start the services:
 docker-compose up --build
 ```
 
+## Build Docker Image using GitHub Actions
+
+The repository contains a GitHub Actions workflow that builds the Docker image on push or pull request to the master branch. To trigger the build, simply push your changes to the master branch or create a pull request targeting the master branch.
+
+## Push Docker Image to Docker Registry
+
+To push the Docker image to a Docker registry, use the following command:
+
+```
+docker tag my-image-name:latest your-docker-registry/my-image-name:latest
+docker push your-docker-registry/my-image-name:latest
+```
+
+Replace `your-docker-registry` with the URL of your Docker registry.
+
+## Pull Docker Image from Docker Registry
+
+To pull the Docker image from a Docker registry, use the following command:
+
+```
+docker pull your-docker-registry/my-image-name:latest
+```
+
+Replace `your-docker-registry` with the URL of your Docker registry.
